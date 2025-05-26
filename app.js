@@ -85,7 +85,7 @@ function afficherActivites (tableauActivites){
                     <p class="black div2">${salle.description}</p>
                 </div>
                 <div class="carte-footer">
-                    <a href="salle.html" class="whitee btnrev">Réservez</a>
+                    <a href="" class="whitee btnrev">Réservez</a>
                 </div>
                  
 
