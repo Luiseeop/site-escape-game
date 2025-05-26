@@ -1,13 +1,102 @@
 fetch('escape-game.json')
   .then(response => response.json())
   .then(data => {
+    afficherActivites(data)
+    afficheravis(data)
+    afficheravantage(data)
+    afficherhero(data)
+
+
+   
     
 
 
 
 
+  })
 
-    data.temoignages.forEach(temoi => {
+
+//role : ma fonction sert a afficher le hero elle crees des constantes pour assigner les donne du json et les affiche avec le innerhtml
+//parametres/arguments: elle recupere le tableau (le json)
+//return : en a pas car elle affiche 
+
+function afficherhero (tableau){
+
+    const titre = tableau.nomCommercial
+    const phrase = tableau.phraseAccroche
+    const accroche = tableau.texteAppelAction
+        
+        document.getElementById("hero").innerHTML += `
+         <div class="container div1">
+            <h1 class="whitee">${titre}</h1>
+            <p class="whitee">${phrase}</p>
+            <a href="#salles" class="btn whitee">${accroche}</a>
+        </div>
+        
+        `
+}
+
+
+
+
+
+
+
+//role : ma fonction sert a afficher les avantage elle fait un foreach pour lire le tableau et les affiche avec le innerhtml
+//parametres/arguments: elle recupere le tableau (le json)
+//return : en a pas car elle affiche 
+
+
+function afficheravantage (tableau){
+
+
+
+    tableau.avantagesClients.forEach(avantage => {
+        
+        document.getElementById("avantage").innerHTML += `
+        <div class="div4">
+            <p class="p1">${avantage}</p>
+        </div>
+        
+        
+        
+        `
+
+
+    });
+}
+
+
+//role : ma fonction sert a afficher les activites elle fait un foreach pour lire le tableau et les affiche avec le innerhtml
+//parametres/arguments: elle recupere le tableau (le json)
+//return : en a pas car elle affiche 
+
+function afficherActivites (tableauActivites){
+
+    tableauActivites.activites.forEach(salle => {
+      document.getElementById("salle").innerHTML += `
+       <div class="cartesa"> <!-- carte -->
+                <div>
+                    <img src="${salle.image}" alt="${salle.nom}" class="imgcard">
+
+                </div>
+                <div class="flex">
+                    <p class="black div2 bold">${salle.nom}</p>
+                    <p class="black div2">${salle.description}</p>
+                </div>
+                <div class="carte-footer">
+                    <a href="salle.html" class="whitee btnrev">Réservez</a>
+                </div>
+                 
+
+            </div>
+      `;
+    });
+
+}
+
+function afficheravis (tableau){
+tableau.temoignages.forEach(temoi => {
     const etoilesPleines = '★'.repeat(temoi.note);
     const etoilesVides = '☆'.repeat(5 - temoi.note);
     const etoiles = etoilesPleines + etoilesVides;
@@ -29,41 +118,9 @@ fetch('escape-game.json')
 
 
 
-    `    });
-
-
-
-
-  })
-
-
-
-function afficherActivites (tableauActivites){
-
-    tableauActivites.activites.forEach(salle => {
-      document.getElementById("salle").innerHTML += `
-       <div class="cartesa"> <!-- carte -->
-                <div>
-                    <img src="${salle.image}" alt="${salle.nom}" class="imgcard">
-
-                </div>
-                <div class="flex">
-                    <p class="black div2 bold">${salle.nom}</p>
-                    <p class="black div2">${salle.description}</p>
-                </div>
-                <div class="carte-footer">
-                    <a href="#salles" class="whitee btnrev">Réservez</a>
-                </div>
-                 
-
-            </div>
-      `;
-    });
+    `  });
 
 }
-
-
-
 
 
 

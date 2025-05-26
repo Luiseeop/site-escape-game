@@ -202,7 +202,7 @@ h1 {
   color: #AC904E;
 }
 
-fd
+
 .btnrev{
      background-color: #292F36;
     color: #AC904E;
@@ -224,7 +224,6 @@ fd
 }
 
 
-df
 
 
 
@@ -289,6 +288,42 @@ df
 
 
 /* avantage */
+
+
+
+/* page salle */
+
+
+
+.divsalle{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.imgsalle{
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* page salle */
+
+
 
 
 /* footer */
