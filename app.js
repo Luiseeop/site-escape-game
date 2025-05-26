@@ -1,6 +1,11 @@
 fetch('escape-game.json')
   .then(response => response.json())
   .then(data => {
+    
+
+
+
+
 
     data.temoignages.forEach(temoi => {
     const etoilesPleines = '★'.repeat(temoi.note);
@@ -24,21 +29,18 @@ fetch('escape-game.json')
 
 
 
-    `
+    `    });
 
 
 
 
+  })
 
 
 
+function afficherActivites (tableauActivites){
 
-    });
-
-
-
-
-    data.activites.forEach(salle => {
+    tableauActivites.activites.forEach(salle => {
       document.getElementById("salle").innerHTML += `
        <div class="cartesa"> <!-- carte -->
                 <div>
@@ -57,22 +59,8 @@ fetch('escape-game.json')
             </div>
       `;
     });
-  })
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
