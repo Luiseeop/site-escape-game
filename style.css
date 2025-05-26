@@ -40,7 +40,7 @@ body {
 
 
 .mgtop-50{
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .mgtop-20{
@@ -114,6 +114,7 @@ h1 {
      font-family: "Spectral SC", serif;
   font-weight: 400;
   font-style: italic;
+  line-height: 1;
 }
 
 
@@ -196,9 +197,30 @@ h1 {
       font-family: "Spectral SC", serif;
   font-weight: 400;
   font-style: italic;
-  margin-left: 380px;
+ text-align: center;
   font-size: 40px;
   color: #AC904E;
+}
+
+
+.btnrev{
+     background-color: #292F36;
+    color: #AC904E;
+    padding: 10px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    transition: 0.6s ease;
+}
+
+.carte-footer{
+    text-align: right;
+    margin-top: auto;
+    padding-right: 20px;
 }
 
 
@@ -223,9 +245,13 @@ h1 {
        font-family: "Spectral SC", serif;
   font-weight: 400;
   font-style: italic;
-  margin-left: 530px;
+  text-align: center;
   font-size: 40px;
   color: #AC904E; 
+}
+
+.size1{
+    font-size: 20px;
 }
 
 
